@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact Info</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="CSS/style.css" rel="stylesheet"/>
+
+    </head>
+    <body>
+        <header>
+            <div id="utahdiv">
+                <img src="/Images/Contact.png" alt="Laptop and phone" title="Contact Us" id="image">
+                <div class="centered">
+                    <h1>
+                        Contact Us
+                    </h1>
+                </div>
+            </div> 
+        </header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Cities &#x25BE;</a>
+                        <ul class="navDropdown">
+                            <li><a href="saltlake.html">Salt Lake City</a></li>
+                            <li><a href="parkcity.html">Park City</a></li>
+                            <li><a href="stgeorge.html">St. George</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+<!-- form and a table called with an ID -->
+            <section>
+                <h3>Contact Us</h3>
+                <br>
+                <p>If you'd like to get ahold of us for any reason, fill out the form below. Please specify what questions you have.</p>
+                <br>
+                <hr>
+                <aside class="finalTable">
+                    <table id="table">
+                        <thead>
+                          <tr>
+                            <th>Thing To Do</th>
+                            <th>City</th>
+                            <th>More Info</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><b>Skiing</b></td>
+                            <td>Park City</td>
+                            <td><a href="https://www.parkcitymountain.com/" target="_blank">Click Here</a></td>
+                          </tr>
+                          <tr>
+                            <td><b>Boating</b></td>
+                            <td>St. George</td>
+                            <td><a href="https://www.redsandsvacations.com/local-area-guide/water-activities/" target="_blank">Click Here</a></td>
+                          </tr>
+                          <tr>
+                            <td><b>Festivals</b></td>
+                            <td>Park City</td>
+                            <td><a href="https://www.visitparkcity.com/events/" target="_blank">Click Here</a></td>
+                          </tr>
+                          <tr>
+                            <td><b>Sports</b></td>
+                            <td>Salt Lake City</td>
+                            <td><a href="https://www.visitsaltlake.com/things-to-do/sports/" target="_blank">Click Here</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </aside>
+                <p>
+                    <form id="userForm" onsubmit="return validateForm()">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" class="form" placeholder="Enter your first name">
+                    
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" class="form" placeholder="Enter your last name">
+                    
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" class="form" placeholder="Enter your email address" required>
+                    
+                        <label for="confirmEmail">Confirm Email Address:</label>
+                        <input type="email" id="confirmEmail" class="form" placeholder="Confirm your email address" required>
+                        <span id="emailError" class="error-message"></span>
+                        <br>
+                        <label for="question">Ask a Question:</label>
+                        <textarea id="question" class="form" placeholder="Any questions?" rows="4"></textarea>
+                    
+                        <button type="submit">Submit</button>
+                      </form>
+                    
+                      <script>
+                        function validateForm() {
+                          var email = document.getElementById('email').value;
+                          var confirmEmail = document.getElementById('confirmEmail').value;
+                          var emailError = document.getElementById('emailError');
+                    
+                          if (email !== confirmEmail) {
+                            emailError.textContent = 'Email addresses do not match.';
+                            return false;
+                          } else {
+                            emailError.textContent = '';
+                            return true;
+                          }
+                        }
+                      </script>
+                      <br>
+                      <hr>
+                </p>
+            </section>
+
+
+
+
+        <footer>
+            <p>References:<a href="contact.html"><sup>9</sup></a></p>
+            <ol>
+                <li>
+                    United States Census Bureau. (2022). QuickFacts: Salt Lake City, Utah. Retrieved from <a href="https://www.census.gov/quickfacts/fact/table/saltlakecitycityutah/PST045222" target="_blank">Census Bureau</a>
+                </li>
+                <li>
+                    Salt Lake City Corporation. (n.d.). History of Salt Lake City. Retrieved from <a href="https://www.slc.gov/" target="_blank">SLC Corporation</a>
+                </li>
+                <li>
+                    United States Census Bureau. (2022). QuickFacts: Park City, Utah. Retrieved from <a href="https://www.census.gov/quickfacts/fact/table/parkcitycityutah/PST045222" target="_blank">Census Bureau</a>
+                </li>
+                <li>
+                    Park City Municipal Corporation. (n.d.). History of Park City. Retrieved from <a href="https://www.parkcity.org/about-us" target="_blank">PCM Corporation</a>
+                </li>
+                <li>
+                    United States Census Bureau. (2022). QuickFacts: St. George, Utah. Retrieved from <a href="https://www.census.gov/quickfacts/fact/table/stgeorgecityutah/PST045222" target="_blank">Census Bureau</a>
+                </li>
+                <li>
+                    City of St. George. (n.d.). History of St. George. Retrieved from <a href="https://www.sgcity.org/" target="_blank">City of St. George</a>
+                </li>
+                <li>
+                    United States Census Bureau. (2022). QuickFacts: Utah. Retrieved from <a href="https://www.census.gov/quickfacts/UT" target="_blank">Census Bureau</a>
+                </li>
+                <li>
+                    Utah.gov. (n.d.). Utah Statehood. Retrieved from <a href="https://www.utah.gov/index.html" target="_blank">Utah.gov</a>
+                </li>
+                <li>
+                    Julian Hochgesang. (2020-4-22). Keyboard background. Retrieved from  <a href="https://unsplash.com/photos/macbook-pro-on-white-table-psGV5KhidlY" target="_blank">Upsplash.com</a>
+                </li>
+                <li>
+                    Arturo Rivera. (2020-5-30). Utah Welcom Sign. Retrieved from <a href="https://unsplash.com/photos/a-welcome-to-utah-sign-in-the-desert-gMVjTFW2nlE" target="_blank">Upsplash.com</a>
+                </li>
+                <li>
+                    Benjamin R.. (2020-6-17). Park City. Retrieved from <a href="https://unsplash.com/photos/white-wooden-bridge-over-snow-covered-mountain-during-daytime-YAEbroWeHCM" target="_blank">Upsplash.com</a>
+                </li>
+                <li>
+                    SoloTravelGoals. (2015-6-19). Delecate Arch Utah. Retrieved from <a href="https://unsplash.com/photos/brown-concrete-structure-7kLufxYoqWk" target="_blank">Upsplash.com</a>
+                </li>
+                <li>
+                    Michael Hart. (2019-6-17). Utah State Capital. Retrieved from <a href="https://unsplash.com/photos/photography-of-capital-building-during-daytime-XalNOk0tgcA" target="_blank">Upsplash.com</a>
+                </li>
+            </ol>
+            <p id="copyright">Copyright &copy; 2027 By Example</p>
+        </footer>
+
+    </body>
+</html>
+
